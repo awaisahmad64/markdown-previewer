@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+body {
+  background-color: #87b5b5;
+  margin: 30px 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  width: 60%;
+  margin: auto auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.editor-header {
+  margin: 0 auto;
+  width: 80%;
+}
+.editor-header .fa-maximize {
+  cursor: pointer;
+}
+textarea {
   display: flex;
-  flex-direction: column;
+  width: 80%;
+  margin: 0 auto 20px;
+  min-height: 300px;
+  resize: vertical;
+  outline: none;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 0.875rem;
+  overflow-y: scroll;
+  box-shadow: 0 1px 2px #666666, 0 2px 17px 6px #666666;
+}
+
+.preview {
+  width: 100%;
+  margin: auto auto;
+  overflow: hidden;
+  background-color: cadetblue;
+  padding: 20px;
+  box-shadow: 0 1px 2px #666666, 0 2px 17px 6px #666666;
+}
+.preview img {
+  width: 100%;
+}
+table,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding:5px;
+}
+pre {
+  background-color: white;
+  padding:10px 0;
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+code{
+  background-color: white;
+}
+.preview-header,
+.editor-header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  background-color: cadetblue;
+  border: 2px solid #666666;
+  box-shadow: 0 1px 2px #666666, 0 2px 17px 6px #666666;
 }
 
-.App-link {
-  color: #61dafb;
+.cursor-pointer {
+  cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+ .container {
+  width: 90%;
+  margin: auto auto;
+  padding:0 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+code{
+      font-size: 0.875rem;
+}
+}
+@media only screen and (max-width: 800px) {
+ .container {
+  width: 80%;
+  margin: auto auto;
+  padding:0 10px;
+}
 }
